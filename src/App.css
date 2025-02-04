@@ -1,0 +1,920 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  max-width: 1020px;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+
+/* General styling */
+.nav-contents-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #000;
+  margin: auto;
+}
+
+.navbar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+
+.ZMH-logo {
+  width: 9%;
+}
+
+/* Links styling */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links ul li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li:hover {
+  color: #FCBD58;
+}
+
+/* Navigation icons styling */
+.nav-links2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#user-search-icon,
+#user-icon,
+#cart-icon {
+  font-size: 20px;
+}
+
+#cart-icon:hover {
+  color: #FCBD58;
+}
+
+.nav-links2 span {
+  background-color: white;
+  padding: 0 3px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 600;
+  font-size: small;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 95%;
+    background-color: #000;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+
+/* Banner */
+
+.banner-wrapper {
+  margin-top: 10px;
+}
+
+.banner-images {
+  position: relative;
+  max-height: 100vh;
+
+}
+
+.banner-wrapper .banner-images img {
+  height: 95vh;
+  width: 100%;
+  margin: auto;
+}
+
+.banner-wrapper .BannerImg-prev {
+  position: absolute;
+  top: 200px;
+  left: 5%;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: red;
+  font-size: 50px;
+  display: flex;
+}
+
+.banner-wrapper .BannerImg-next {
+  position: absolute;
+  top: 200px;
+  right: 5%;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  color: red;
+  font-size: 50px;
+  display: flex;
+}
+
+.banner-wrapper:hover .BannerImg-prev,
+.banner-wrapper:hover .BannerImg-next {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+  /* Responsive Design */
+  @media (min-width: 1024px) {
+    
+  }
+
+  @media (min-width: 768px) {
+   .banner-wrapper .BannerImg-next{
+    top: 400px;
+   }
+  .banner-wrapper .BannerImg-prev{
+    top: 400px;
+  }
+  }
+
+  @media (max-width: 767px) {
+   .banner-wrapper .BannerImg-next{
+      top: 400px;
+    }
+   .banner-wrapper .BannerImg-prev{
+      top: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner-wrapper .banner-images img{
+      height: 70vh;
+    }
+    .banner-wrapper .BannerImg-next{
+      top: 300px;
+      right: 0;
+
+    }
+   .banner-wrapper .BannerImg-prev{
+      top: 300px;
+      left: 0;
+
+    }
+  }
+
+
+
+/* Shop By Category */
+.ShopByCategory-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  color: #ffff;
+}
+
+.ShopByCategory-container .category-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./component/ZMH FrontEnd/ZMH Images/women-fashion-free-img\ zmh.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 450px;
+  margin: auto;
+}
+
+.ShopByCategory-container .category-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./component/ZMH FrontEnd/ZMH Images/footwear-zmh.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 450px;
+  margin: auto;
+}
+
+.ShopByCategory-container .category-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./component/ZMH FrontEnd/ZMH Images/women-fashion-free-img\ zmh.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 450px;
+  margin: auto;
+}
+
+.ShopByCategory-container .category-1 div,
+.ShopByCategory-container .category-2 div,
+.ShopByCategory-container .category-3 div {
+  margin-top: 250px;
+  margin-left: 30px;
+  width: 90%;
+  font-family: sans-serif;
+}
+
+.ShopByCategory-container .category-1 div p,
+.ShopByCategory-container .category-2 div p,
+.ShopByCategory-container .category-3 div p {
+  font-weight: lighter;
+  line-height: 1.7;
+}
+
+.ShopByCategory-container .category-1 div button,
+.ShopByCategory-container .category-2 div button,
+.ShopByCategory-container .category-3 div button {
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.ShopByCategory-container .category-1 div button:hover,
+.ShopByCategory-container .category-2 div button:hover,
+.ShopByCategory-container .category-3 div button:hover {
+  background-color: #000;
+  color: #ffff;
+}
+  /* Responsive Design */
+ 
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .ShopByCategory-container {
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ShopByCategory-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ShopByCategory-container {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+    }
+  }
+
+/* Trending Products Now */
+.trendingNow-wrapper {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.trendingNow-header {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trendingNow-header p {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #FCBD58;
+}
+
+.trendingNow-header h2 {
+  margin-top: 0;
+  font-size: 36px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.trendingNow-header span {
+  border: 2px solid #FCBD58;
+  display: block;
+  width: 50px;
+  margin: 10px auto 0;
+}
+
+.Trending-products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+
+.Trending-products-wrapper div {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Trending-products-wrapper div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.Trending-products-wrapper div h3 {
+  margin: 10px 0 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.Trending-products-wrapper span {
+  display: block;
+  margin: 8px 0;
+}
+
+.Trending-products-wrapper div span:nth-of-type(1) {
+  color: #FCBD58;
+  font-weight: bold;
+}
+
+.trending-product-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.trending-product-colors {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.trending-product-colors div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.trending-product-colors div:nth-of-type(1) {
+  background-color: #FCBD58;
+}
+
+.trending-product-colors div:nth-of-type(2) {
+  background-color: #000;
+}
+
+.trending-product-colors div:nth-of-type(3) {
+  background-color: blue;
+}
+  /* Responsive Design */
+  @media (min-width: 1024px) {
+    .Trending-products-wrapper   {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .Trending-products-wrapper   {
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .Trending-products-wrapper   {
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trendingNow-wrapper{
+      width: 95%;
+      margin: 0 auto;
+    }
+    .Trending-products-wrapper   {
+      width: 80%;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+
+/* Limited Time Offer */
+
+.LMT {
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: url('./component/ZMH FrontEnd/ZMH Images/ZMH-Banner.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: bottom;
+  width: 100%,;
+  height: 70vh,
+}
+
+.LMT-Txt {
+  width: 45%;
+  padding-top: 130px;
+  margin-left: 50px;
+  color: #ffff;
+}
+
+.LMT-Txt h3 {
+  font-weight: 550;
+  font-family: serif;
+}
+.LMT-Txt h1{
+  text-align: left;
+}
+
+.LMT-Txt button {
+  color: #000;
+  padding: 13px 25px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+}
+
+ /* Responsive Design */
+
+ @media (max-width: 768px) {
+  .LMT{
+   width: 100%;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-attachment: inherit;
+  }
+  .LMT-Txt{
+    width: 60%;
+    padding-top: 100px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .LMT{
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: inherit;
+   height: 60vh;
+  }
+  .LMT-Txt{
+    width: 60%;
+    padding-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+
+
+
+/* SPOTLIGHT */
+
+.spotlight-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.spotlight {
+  color: #ffff;
+}
+.spotlight-txt {
+  padding-left: 50px;
+  padding-top: 70px;
+}
+
+.spotlight-txt span {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 200;
+  /* margin-bottom: 20px; */
+}
+
+.spotlight-txt h1 {
+  margin-top: 0;
+  margin-top: 10px;
+  width: 25%;
+  font-size: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.spotlight-txt p {
+  font-size: 23px;
+  width: 35%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.spotlight-txt button {
+  padding: 15px 20px;
+  border: none;
+  font-weight: 600;
+}
+  /* Responsive Design */
+
+
+  @media (max-width: 767px) {
+    .spotlight-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .spotlight-txt h1 {
+      margin-top: 10px;
+      width: 55%;
+      font-size: 25px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: left;
+    }
+    
+    .spotlight-txt p {
+      font-size: 20px;
+      width: 40%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+  }
+
+
+/* WHY CHOOSE US */
+.Why-Choose-Us-Infos {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  color: #ffff;
+  margin-top: 30px;
+}
+
+.Why-Choose-Us-left {
+  width: 25%;
+}
+
+.Why-Choose-Us-left h4 {
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+.Why-Choose-Us-left .text-divider {
+  display: block;
+  border-block-start: 2px solid gold;
+  width: 21%;
+}
+
+.Why-Choose-Us-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 75%;
+}
+
+.Why-Choose-Us-right .reasons {
+  width: 90%;
+}
+
+.Why-Choose-Us-right .reasons-cont {
+  display: flex;
+  gap: 1rem;
+}
+
+.reasons-cont h2 {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.Why-Choose-Us-right .reason1-icon,
+.Why-Choose-Us-right .reason2-icon,
+.Why-Choose-Us-right .reason3-icon {
+  color: gold;
+  border: 1px solid silver;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: larger;
+  transition: 0.3s ease;
+}
+
+.Why-Choose-Us-right .reason1-icon:hover,
+.Why-Choose-Us-right .reason2-icon:hover,
+.Why-Choose-Us-right .reason3-icon:hover {
+  color: #000;
+  background-color: gold;
+  border-color: gold;
+} 
+
+.reasons-cont p {
+  line-height: 1.7;
+  color: rgb(252, 246, 246);
+  font-weight: 100;
+}
+ /* Responsive Design */
+ @media (min-width: 1024px) {
+ 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+  .Why-Choose-Us-left{
+    width: 20%;
+  }
+  .Why-Choose-Us-left h4 {
+    font-size: 10px;
+  }
+
+  
+  .Why-Choose-Us-left .text-divider {
+    display: block;
+    border-block-start: 2px solid gold;
+    width: 21%;
+  }
+  
+  .Why-Choose-Us-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+  }
+  
+  .Why-Choose-Us-right .reasons {
+    width: 90%;
+  }
+  .reasons-cont h2{
+    font-size: 10px;
+  }
+  .Why-Choose-Us-right .reason1-icon,
+  .Why-Choose-Us-right .reason2-icon,
+  .Why-Choose-Us-right .reason3-icon{
+    font-size: small;
+  }
+}
+
+/* FOOTER */
+.footer-top {
+  width: 95%;
+  margin: auto;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.footer-top p {
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: 0.5s ease;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  color: white;
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-left {
+  width: 30%;
+}
+
+.footer-left img {
+  width: 20%;
+}
+
+.footer-left p {
+  color: #efb863;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+.footer-left h6 {
+  font-size: 12px;
+  /* color: #efb863; */
+  margin-bottom: 15px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.socials-link .Fa:hover {
+  color: #efb863;
+}
+
+.footer-right {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-right ul {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer-right li {
+  line-height: 2;
+  font-weight: lighter;
+  transition: 0.3s ease;
+  color: whitesmoke;
+}
+
+.footer-right li:hover {
+  color: gold;
+}
+
+.footer-right h6 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-bottom {
+  width: 95%;
+  margin: auto;
+  border-top: 1px solid #fff;
+  margin-top: 40px;
+  padding: 10px 0;
+  color: white;
+}
+
+.footer-bottom div {
+  display: flex;
+  gap: 1rem;
+  width: 50%;
+  color: white;
+}
+
+.footer-bottom p {
+  transition: ease 0.5s;
+}
+
+.footer-bottom p:nth-of-type(2){
+ border-left: 2px solid #fff;
+ padding-left: 15px;
+}
+
+.footer-top p:hover,
+.footer-bottom p:hover {
+  color: #FCBD58;
+}
+
+.scroll-to-top {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: rgb(51, 51, 51);
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  position: fixed;
+  right: 35px;
+  bottom: 20px;
+  z-index: 1;
+  font-size: larger;
+  Transition: 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  color: #FCBD58;
+}
+ /* Responsive Design */
+ @media (min-width: 1024px) {
+ 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+}
+
+@media (max-width: 767px) {
+ 
+}
+
+@media (max-width: 480px) {
+  .footer-left {
+    width: 30%;
+  }
+  
+  .footer-left img {
+    width: 50%;
+  }
+  
+  .footer-left p{
+    font-size: 10px;
+  }
+  
+  .footer-left h6 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .socials-link {
+    display: flex;
+    justify-content: space-between;
+    width: 79%;
+  }
+  
+  .footer-right {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .footer-right ul {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .footer-right li {
+    line-height: 2;
+    font-weight: lighter;
+    font-size: 10px;
+    transition: 0.3s ease;
+    color: whitesmoke;
+  }
+  .footer-right h3{
+    font-size: 13px;
+  }
+ 
+
+  .footer-bottom div {
+    display: flex;
+    gap: 1rem;
+    width: 70%;
+    color: white;
+  }
+}
