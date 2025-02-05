@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a7dbdb5.css",
+    "main.css": "/static/css/main.ea151d97.css",
     "main.js": "/static/js/main.23b1b9ba.js",
     "static/media/Hollantex.jpeg": "/static/media/Hollantex.1d69fe298eebd67ba89b.jpeg",
     "static/media/ZMH-Banner.jpeg": "/static/media/ZMH-Banner.30e3c5ce4340b0184418.jpeg",
@@ -9,11 +9,11 @@
     "static/media/ZMH-collections Logo.jpeg": "/static/media/ZMH-collections Logo.29046502bcb2d9b08768.jpeg",
     "static/media/spotlight.jpg": "/static/media/spotlight.3cb161e3b044d720fa8d.jpg",
     "index.html": "/index.html",
-    "main.7a7dbdb5.css.map": "/static/css/main.7a7dbdb5.css.map",
+    "main.ea151d97.css.map": "/static/css/main.ea151d97.css.map",
     "main.23b1b9ba.js.map": "/static/js/main.23b1b9ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a7dbdb5.css",
+    "static/css/main.ea151d97.css",
     "static/js/main.23b1b9ba.js"
   ]
 }
