@@ -1062,6 +1062,15 @@ font-size: 1rem;
     gap: 1rem;
     width: 70%;
     color: white;
+    font-size: 10px;
+  }
+  .scroll-to-top {
+    width: 28px;
+    height: 28px;
+    line-height: 36px;
+    right: 20px;
+    bottom: 17px;
+    font-size: large;
   }
 }
 
