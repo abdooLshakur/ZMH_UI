@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d1242a6.css",
-    "main.js": "/static/js/main.b1418709.js",
+    "main.css": "/static/css/main.034cc417.css",
+    "main.js": "/static/js/main.23b1b9ba.js",
     "static/media/Hollantex.jpeg": "/static/media/Hollantex.1d69fe298eebd67ba89b.jpeg",
     "static/media/ZMH-Banner.jpeg": "/static/media/ZMH-Banner.30e3c5ce4340b0184418.jpeg",
     "static/media/women-fashion-free-img zmh.jpg": "/static/media/women-fashion-free-img zmh.a70ab272a56accdab763.jpg",
@@ -9,11 +9,11 @@
     "static/media/ZMH-collections Logo.jpeg": "/static/media/ZMH-collections Logo.29046502bcb2d9b08768.jpeg",
     "static/media/spotlight.jpg": "/static/media/spotlight.3cb161e3b044d720fa8d.jpg",
     "index.html": "/index.html",
-    "main.7d1242a6.css.map": "/static/css/main.7d1242a6.css.map",
-    "main.b1418709.js.map": "/static/js/main.b1418709.js.map"
+    "main.034cc417.css.map": "/static/css/main.034cc417.css.map",
+    "main.23b1b9ba.js.map": "/static/js/main.23b1b9ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d1242a6.css",
-    "static/js/main.b1418709.js"
+    "static/css/main.034cc417.css",
+    "static/js/main.23b1b9ba.js"
   ]
 }

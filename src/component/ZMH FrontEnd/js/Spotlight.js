@@ -4,13 +4,9 @@ function Spotlight() {
     return (
         <div className='spotlight-wrapper'>
             <div className='spotlight'>
-                <div style={{
+                <div className='spotlight-img' style={{
                     backgroundImage: `url(${spotlightIMG})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`,
-                    height: `500px`,
-                    width: `100%`,
+                    
                 }}>
                     <div className='spotlight-txt'>
                         <span>New Collections</span>
@@ -21,13 +17,9 @@ function Spotlight() {
                 </div>
             </div>
             <div className='spotlight'>
-                <div style={{
+                <div className='spotlight-img' style={{
                     backgroundImage: `url(${spotlightIMG})`,
-                    backgroundSize: `cover`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundPosition: `center`,
-                    height: `500px`,
-                    width: `100%`,
+                  
                 }}>
                     <div className='spotlight-txt'>
                         <span>New Collections</span>

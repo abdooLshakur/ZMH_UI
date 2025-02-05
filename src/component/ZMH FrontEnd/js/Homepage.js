@@ -12,7 +12,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Homepage() {
   return (
-    <div>
+    <div className='pagecontainer'>
        {/* Toast Notification Container */}
        <ToastContainer />
       <Navigation/>
@@ -24,7 +24,7 @@ function Homepage() {
       <Spotlight/>
       <WhyChooseUs/>
       <Footer/>
-    </div>
+      </div>
   );
 }
 
