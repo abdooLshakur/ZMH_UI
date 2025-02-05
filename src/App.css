@@ -307,7 +307,7 @@ body {
   .ShopByCategory-container {}
 }
 
-@media (max-width: 770px) {
+@media (max-width: 777px) {
   .ShopByCategory-container {
     gap: 1rem;
   }
