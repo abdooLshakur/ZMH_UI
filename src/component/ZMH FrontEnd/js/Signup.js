@@ -4,7 +4,7 @@ export default function SignupPage() {
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
-    email: "", 
+    email: "",
     phone: "",
     password: "",
   });
@@ -44,19 +44,54 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black px-4 w-full">
-      <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg bg-gradient-to-r from-gray-900 to-black text-white p-4 sm:p-6 rounded-2xl shadow-lg">
-        <div>
-          <h2 className="text-xl sm:text-2xl font-bold text-center text-white mb-6">Sign Up</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input name="first_name" placeholder="First Name" onChange={handleChange} required className="w-full p-3 sm:p-4 bg-gray-800 text-white border-none rounded" />
-            <input name="last_name" placeholder="Last Name" onChange={handleChange} required className="w-full p-3 sm:p-4 bg-gray-800 text-white border-none rounded" />
-            <input name="email" type="email" placeholder="Email" onChange={handleChange} required className="w-full p-3 sm:p-4 bg-gray-800 text-white border-none rounded" />
-            <input name="phone" placeholder="Phone" onChange={handleChange} required className="w-full p-3 sm:p-4 bg-gray-800 text-white border-none rounded" />
-            <input name="password" type="password" placeholder="Password" onChange={handleChange} required className="w-full p-3 sm:p-4 bg-gray-800 text-white border-none rounded" />
-            <button type="submit" className="w-full bg-white hover:bg-gray-300 text-black font-semibold py-3 sm:py-4 rounded-lg">Sign Up</button>
-          </form>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-black px-4">
+      <div className="w-full max-w-md bg-gray-900 text-white p-6 sm:p-8 rounded-xl shadow-lg mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input 
+            name="first_name" 
+            placeholder="First Name" 
+            onChange={handleChange} 
+            required 
+            className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            name="last_name" 
+            placeholder="Last Name" 
+            onChange={handleChange} 
+            required 
+            className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            name="email" 
+            type="email" 
+            placeholder="Email" 
+            onChange={handleChange} 
+            required 
+            className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            name="phone" 
+            placeholder="Phone" 
+            onChange={handleChange} 
+            required 
+            className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            name="password" 
+            type="password" 
+            placeholder="Password" 
+            onChange={handleChange} 
+            required 
+            className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button 
+            type="submit" 
+            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-300"
+          >
+            Sign Up
+          </button>
+        </form>
       </div>
     </div>
   );

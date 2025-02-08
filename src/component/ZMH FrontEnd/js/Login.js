@@ -1,53 +1,41 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-export default function Login() {
+const Login = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black text-white">
-      <div className="w-full max-w-md p-8 bg-black border border-yellow-500 rounded-2xl shadow-lg">
-        <motion.h1 
-          className="text-4xl font-bold text-center text-yellow-500 mb-6"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Welcome Back!
-        </motion.h1>
-        <p className="text-center text-yellow-500 text-lg mb-6">Please log in to continue.</p>
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <div className="w-xl  p-8 bg-gray-900 rounded-2xl shadow-lg text-center">
+        <h2 className="text-2xl font-bold text-yellow-500">Welcome Back</h2>
+        <p className="text-gray-400 mb-6">Please sign in to continue</p>
+        
         <form>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-yellow-500 font-medium mb-2">
-              Email Address
-            </label>
             <input
               type="email"
-              id="email"
-              className="w-full p-3 rounded-xl bg-black border border-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-              placeholder="Enter your email"
+              placeholder="Email"
+              className="w-full p-3 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-gold-500"
             />
           </div>
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-yellow-500 font-medium mb-2">
-              Password
-            </label>
+          <div className="mb-4">
             <input
               type="password"
-              id="password"
-              className="w-full p-3 rounded-xl bg-black border border-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-              placeholder="Enter your password"
+              placeholder="Password"
+              className="w-full p-3 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-gold-500"
             />
           </div>
           <button
             type="submit"
-            className="w-full p-3 bg-yellow-500 text-black font-bold rounded-xl hover:bg-opacity-80 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50"
+            className="w-full p-4 mt-4 bg-yellow-500 text-black font-semibold rounded-md hover:bg-yellow-600 transition"
           >
-            Log In
+            Login
           </button>
         </form>
-        <p className="text-center text-sm text-yellow-500 mt-4">
-          Don't have an account? <a href="#" className="underline hover:text-opacity-80">Sign up</a>
+        
+        <p className="text-gray-500 mt-4">
+          Don't have an account? <a className="text-gold-500 hover:underline">Sign up</a>
         </p>
       </div>
     </div>
   );
-}
+};
+
+export default Login;

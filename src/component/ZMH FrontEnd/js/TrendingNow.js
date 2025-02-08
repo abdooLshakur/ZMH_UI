@@ -12,8 +12,7 @@ function TrendingNow() {
     const [error, setError] = useState(null);
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const navigate = useNavigate();
-    // const api = "https://zmh-api.onrender.com"
-    const api = "http://localhost:9000"
+    const api = "https://zmh-api.onrender.com"
     const fetchProduct = async () => {
         setLoading(true);
         setError(null);
@@ -28,11 +27,11 @@ function TrendingNow() {
     
             switch (response.status) {       
               case 500:
-                toast.error("Server error. Please try again later.", "error");
+                console.log("Server error. Please try again later.", "error");
                 break;
     
               default:
-                toast.error("Failed to add product to trending. Please try again.", "error");
+                console.log("Failed to add product to trending. Please try again.", "error");
             }
     
             // Log the error for debugging
@@ -46,13 +45,13 @@ function TrendingNow() {
           const featuredData = (data || []).filter((item) => item.is_featured === true);
           const featuredResult = featuredData.length > 0 ? featuredData : [];
 
-          console.log(featuredResult)
+          // console.log(featuredResult)
           setProduct(featuredResult);
         } catch (error) {
           if (error.message.includes("NetworkError")) {
-            toast.warning("Network error. Please check your connection and try again.", "error");
+            console.log("Network error. Please check your connection and try again.", "error");
           } else {
-            toast.warning("Failed to fetch categories. Please try again.", "error");
+            console.log("Failed to fetch categories. Please try again.", "error");
           }
           setError(error.message);
         } finally {

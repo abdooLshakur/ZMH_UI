@@ -15,7 +15,7 @@ function Homepage() {
     <div className='pagecontainer'>
        {/* Toast Notification Container */}
        <ToastContainer />
-      <Navigation/>
+      {/* <Navigation/> */}
       <Banner/>
       <ShopByCategory/>
       <TrendingNow/>

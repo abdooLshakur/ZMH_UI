@@ -13,60 +13,60 @@ function BestSelling() {
         const navigate = useNavigate();
         // const api = "https://zmh-api.onrender.com"
         const api = "http://localhost:9000"
-        const fetchProduct = async () => {
-            setLoading(true);
-            setError(null);
+        // const fetchProduct = async () => {
+        //     setLoading(true);
+        //     setError(null);
           
-            try {
-              console.log("Fetching products from:", `${api}/api/user-Products`);
+        //     try {
+        //       console.log("Fetching products from:", `${api}/api/user-Products`);
           
-              const response = await fetch(`${api}/api/Products`, {
-                headers: { "Content-Type": "application/json" },
-                method: "GET"
-              });
+        //       const response = await fetch(`${api}/api/Products`, {
+        //         headers: { "Content-Type": "application/json" },
+        //         method: "GET"
+        //       });
           
-              console.log("Response Status:", response.status);
+        //       console.log("Response Status:", response.status);
           
-              if (!response.ok) {
-                const errorMessage = await response.text();
-                console.error(`HTTP Error: ${response.status}`, errorMessage);
+        //       if (!response.ok) {
+        //         const errorMessage = await response.text();
+        //         console.error(`HTTP Error: ${response.status}`, errorMessage);
           
-                switch (response.status) {
-                  case 500:
-                    toast.error("Server error. Please try again later.");
-                    break;
-                  default:
-                    toast.error("Failed to fetch products. Please try again.");
-                }
+        //         switch (response.status) {
+        //           case 500:
+        //             toast.error("Server error. Please try again later.");
+        //             break;
+        //           default:
+        //             toast.error("Failed to fetch products. Please try again.");
+        //         }
           
-                throw new Error(`HTTP Error: ${response.status}`);
-              }
+        //         throw new Error(`HTTP Error: ${response.status}`);
+        //       }
           
-              const data = await response.json();
-              console.log("Fetched Data:", data);
+        //       const data = await response.json();
+        //       console.log("Fetched Data:", data);
           
-              // Ensure the response is structured correctly
-              const productArray = Array.isArray(data.data) ? data.data : [];
+        //       // Ensure the response is structured correctly
+        //       const productArray = Array.isArray(data.data) ? data.data : [];
           
-              // Apply filter only if productArray is an array
-              const trendingData = productArray.filter((item) => item.is_trending === true);
-              const trendingResult = trendingData.length > 0 ? trendingData : [];
-              setProduct(trendingResult)
-            } catch (error) {
-              console.error("Fetch error:", error);
-              toast.error(error.message.includes("NetworkError")
-                ? "Network error. Please check your connection and try again."
-                : "Failed to fetch products. Please try again."
-              );
-              setError(error.message);
-            } finally {
-              setLoading(false);
-            }
-          };
+        //       // Apply filter only if productArray is an array
+        //       const trendingData = productArray.filter((item) => item.is_trending === true);
+        //       const trendingResult = trendingData.length > 0 ? trendingData : [];
+        //       setProduct(trendingResult)
+        //     } catch (error) {
+        //       console.error("Fetch error:", error);
+        //       toast.error(error.message.includes("NetworkError")
+        //         ? "Network error. Please check your connection and try again."
+        //         : "Failed to fetch products. Please try again."
+        //       );
+        //       setError(error.message);
+        //     } finally {
+        //       setLoading(false);
+        //     }
+        //   };
           
-          useEffect(() => {
-            fetchProduct();
-          }, []);
+        //   useEffect(() => {
+        //     fetchProduct();
+        //   }, []);
           
           
     return (

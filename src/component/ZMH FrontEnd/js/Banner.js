@@ -11,8 +11,7 @@ function Banner() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     
     const navigate = useNavigate();
-    // const api = "https://zmh-api.onrender.com";
-    const api = "http://localhost:9000";
+    const api = "https://zmh-api.onrender.com";
 
 
     const fetchBanner = async () => {
@@ -27,10 +26,10 @@ function Banner() {
             const errorMessage = await response.text();
             switch (response.status) {
               case 500:
-                toast.error("Server error. Please try again later.", "error");
+                console.log("Server error. Please try again later.", "error");
                 break;
               default:
-                toast.error(`Error: ${errorMessage || "Failed to fetch banners."}`, "error");
+                console.log(`Error: ${errorMessage || "Failed to fetch banners."}`, "error");
             }
             throw new Error(`HTTP Error: ${response.status}`);
           }
@@ -39,7 +38,7 @@ function Banner() {
           if (!data || !data.data) throw new Error("Invalid response structure from the server.");
     
           setBannerImages(data.data);
-          console.log(data.data)
+        //   console.log(data.data)
         } catch (error) {
           setError("Failed to fetch Banners. Please try again.");
           toast.error("Error fetching Banners. Please try again.", "error");
@@ -88,38 +87,24 @@ function Banner() {
         <div className="banner-wrapper" style={{ position: "relative", overflow: "hidden" }}>
             <div className="banner-images">
                 {BannerImages.map((banner, index) => (
-                    <div
+                    <div className="banner-img-div"
                         key={index}
                         style={{
                             display: index === currentIndex ? "block" : "none",
                             position: "relative",
-                            width: "95%",
+                            width: "100%",
                             margin: "auto",
                         }}
                     >
                         <img src={`${api}/${banner.banner_img}`} alt={banner.alt} />
                         <div
                             className="banner-text"
-                            style={{
-                                position: "absolute",
-                                top: "40%",
-                                left: "10%",
-                                fontFamily: "sans-serif",
-                                color: "#fff",
-                                textShadow: "0 2px 5px rgba(0, 0, 0, 0.8)",
-                            }}
                         >
                             <h1>{banner.banner_header}</h1>
                             <h3>{banner.banner_descp}</h3>
                             {/* <p>{banner.paragraph}</p> */}
                             <Link to={banner.banner_link}>
-                            <button
-                                style={{
-                                    padding: "12px 20px",
-                                    border: "none",
-                                    fontSize: "14px",
-                                    fontWeight: "600",
-                                }}
+                            <button className="banner-button"
                             >
                                 SHOP NOW
                             </button>

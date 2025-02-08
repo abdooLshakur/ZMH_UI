@@ -1,14 +1,12 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: black;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-}
-
-.pagecontainer {
-  max-width: 95%;
+  box-sizing: border-box;
   margin: 0 auto;
 }
+
+
 
 /* General styling */
 .nav-contents-wrapper {
@@ -82,7 +80,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 778px) {
+@media (max-width: 778px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -117,7 +115,7 @@ body {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media (min-width: 769px) {
   .hamburger {
     display: none;
   }
@@ -173,7 +171,20 @@ body {
   font-size: 50px;
   display: flex;
 }
-
+.banner-text{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-Family: sans-serif;
+  color: #fff;
+  text-Shadow: 0 2px 5px rgba(0, 0, 0, 0.8)
+}
+.banner-button{
+  padding: 12px 20px;
+  border: none;
+  font-Size: 14px;
+  font-Weight: 600;
+}
 .banner-wrapper:hover .BannerImg-prev,
 .banner-wrapper:hover .BannerImg-next {
   transform: translateY(0);
@@ -205,7 +216,12 @@ body {
 }
 
 @media (max-width: 480px) {
+  .banner-wrapper{
+    width: 100%;
+
+  }
   .banner-wrapper .banner-images img {
+    width: 100%;
     height: 70vh;
   }
 
@@ -271,7 +287,7 @@ body {
 .ShopByCategory-container .category-3 div {
   margin-top: 250px;
   padding-left: 30px;
-  width: 90%;
+  width: 100%;
   font-family: sans-serif;
 }
 
@@ -309,6 +325,8 @@ body {
 
 @media (max-width: 777px) {
   .ShopByCategory-container {
+    width: 90%;
+    margin: 0 auto;
     gap: 1rem;
   }
 
@@ -316,7 +334,18 @@ body {
   .ShopByCategory-container .category-1,
   .ShopByCategory-container .category-2,
   .ShopByCategory-container .category-3 {
-    height: 350px;
+    display: flex;
+    justify-content: flex-end;
+    --background-transition: 0.3s;
+    --overlay-opacity: 0.5;
+    --margin-top: 10px;
+    --margin-bottom: 10px;
+    --margin-left: 10px;
+    --margin-right: 10px;
+    --padding-top: 40px;
+    --padding-bottom: 40px;
+    --padding-left: 40px;
+    --padding-right: 40px;
   }
 
  
@@ -326,6 +355,7 @@ body {
     margin-top: 100px;
     padding-left: 5px;
     width: 95%;
+   
   }
 
   .ShopByCategory-container .category-1 div button,
@@ -341,44 +371,46 @@ body {
 
 @media (max-width: 480px) {
   .ShopByCategory-container {
-    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .ShopByCategory-container .category-1,
   .ShopByCategory-container .category-2,
   .ShopByCategory-container .category-3 {
-    height: 270px;
+    height: 300px;
   }
 
 
   .ShopByCategory-container .category-1 div,
   .ShopByCategory-container .category-2 div,
   .ShopByCategory-container .category-3 div {
-    margin-top: 10px;
+    padding-top: 30px;
     padding-left: 5px;
-    width: 100%;
+    padding-right: 5px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .ShopByCategory-container .category-1 div button,
   .ShopByCategory-container .category-2 div button,
   .ShopByCategory-container .category-3 div button {
-    padding: 5px 6px;
+    padding: 10px 20px;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 15px;
   }
   .ShopByCategory-container h2{
-    font-size: 13px;
+    font-size: 20px;
   }
   .ShopByCategory-container p{
-    font-size: small;
+    font-size: large;
   }
 }
 
 /* Trending Products Now */
 .trendingNow-wrapper {
   margin: auto;
-  margin-top: 30px;
-  background-color: #1c1c1c;
+  margin-top: 35px;
+  /* background-color: #1c1c1c; */
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -499,6 +531,8 @@ body {
   .Trending-products-wrapper {
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .Trending-products-wrapper div {
@@ -519,8 +553,13 @@ body {
 }
 
 @media (max-width: 480px) {
+  .trendingNow-wrapper{
+    width: 90%;
+    margin: auto;
+  }
   .Trending-products-wrapper {
     gap: 10px;
+    margin: auto;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -557,9 +596,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: bottom;
-  width: 100%, ;
-  height: 70vh,
+  width: 100%;
+  height: 70vh;
 }
+
 
 .LMT-Txt {
   width: 45%;
@@ -589,8 +629,9 @@ body {
 
 @media (max-width: 777px) {
   .LMT {
-    width: 100%;
-    height: 60vh;
+    width: 90%;
+    margin:40px auto;
+    height: 80vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -610,13 +651,14 @@ body {
 
 @media (max-width: 480px) {
   .LMT {
-    width: 100%;
-    height: 48vh;
+    width: 90%;
+    margin: 20px auto;
+    height: 70vh;
   }
 
   .LMT-Txt {
-    width: 70%;
-    padding-top: 30px;
+    width: 80%;
+    padding-top: 20px;
     margin-left: 30px;
   }
   .LMT-Txt h1 {
@@ -723,10 +765,14 @@ font-size: 1rem;
 
 @media (max-width: 480px) {
   .spotlight-wrapper {
-    gap: 0.5rem;
-    width: 98%;
-    height: 40vh;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    height: auto;
+    margin: auto;
     margin-top: 30px;
+}
+.spotlight{
+  height: 300px;
 }
 .spotlight-txt {
   padding-top: 60px;
