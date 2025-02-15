@@ -43,9 +43,7 @@ function Footer() {
                         <div className="socials-link">
                             <FaFacebookF className="Fa" />
                             <FaInstagram className="Fa" />
-                            <FaTwitter className="Fa" />
-                            <FaYoutube className="Fa" />
-                            <FaTiktok className="Fa" />
+                            {/* <FaTiktok className="Fa" /> */}
                         </div>
                     </div>
                 </div>

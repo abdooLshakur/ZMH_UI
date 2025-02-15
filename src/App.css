@@ -1,9 +1,8 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
   background-color: black;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 
@@ -16,7 +15,8 @@ html, body {
   right: 0;
   z-index: 99;
   background-color: #000;
-  width: 100%;
+  max-width: 100%;
+  height: 100px;
 
 }
 
@@ -25,13 +25,18 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .ZMH-logo {
-  width: 9%;
+  width: 100px;
+  height: 100px;
 }
-
+.ZMH-logo img{
+  width: 100%;
+  height: 18px;
+}
 /* Links styling */
 .nav-links {
   display: flex;
@@ -286,8 +291,8 @@ html, body {
 .ShopByCategory-container .category-2 div,
 .ShopByCategory-container .category-3 div {
   margin-top: 250px;
-  padding-left: 30px;
-  width: 100%;
+  padding-left: 25px;
+  width: 90%;
   font-family: sans-serif;
 }
 
@@ -369,7 +374,7 @@ html, body {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .ShopByCategory-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -649,11 +654,11 @@ html, body {
 }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .LMT {
     width: 90%;
     margin: 20px auto;
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .LMT-Txt {
@@ -691,6 +696,7 @@ font-size: 1rem;
 }
 
 .spotlight {
+  height: 50vh;
   color: #ffff;
 }
 
@@ -708,11 +714,14 @@ font-size: 1rem;
 .spotlight-txt h1 {
   margin-top: 0;
   margin-top: 10px;
-  width: 25%;
+  width: 50%;
+  text-align: left;
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+.spotlight-img {
+  height: 100%;
+}
 .spotlight-txt p {
   font-size: 23px;
   width: 35%;
@@ -763,7 +772,7 @@ font-size: 1rem;
 }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .spotlight-wrapper {
     grid-template-columns: repeat(1, 1fr);
     width: 90%;
@@ -776,7 +785,7 @@ font-size: 1rem;
 }
 .spotlight-txt {
   padding-top: 60px;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .spotlight-img {
   background-size: cover;
@@ -811,7 +820,7 @@ font-size: 1rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 90%;
   margin: auto;
   color: #ffff;
   margin-top: 30px;
@@ -885,7 +894,10 @@ font-size: 1rem;
 
 @media (max-width: 767px) {}
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+  .Why-Choose-Us-Infos{
+    
+  }
   .Why-Choose-Us-left {
     width: 20%;
   }
@@ -971,8 +983,7 @@ font-size: 1rem;
 
 .socials-link {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  gap: 2rem;
 }
 
 .socials-link .Fa:hover {
@@ -1068,7 +1079,7 @@ font-size: 1rem;
   }
 
   .footer-left img {
-    width: 30%;
+    width: 20%;
   }
 
   .footer-left p {
@@ -1083,7 +1094,7 @@ font-size: 1rem;
   .socials-link {
     display: flex;
     justify-content: space-between;
-    width: 79%;
+    /* width: %; */
   }
 
   .footer-right {
